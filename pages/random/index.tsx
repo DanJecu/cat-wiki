@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { reveal } from '../../animations/variants';
 
 const randomCat = (): string => {
-    const randomIndex = Math.floor(Math.random() * 67);
+    const randomIndex = Math.floor(Math.random() * 66);
     return breeds.breeds[randomIndex];
 };
 
