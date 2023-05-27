@@ -66,7 +66,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
-            <AnimatePresence mode='wait'>
+            <AnimatePresence>
                 <motion.div
                     key={router.route}
                     initial='initial'

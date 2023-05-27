@@ -44,6 +44,7 @@ function FeaturedArticle() {
                         width={611}
                         height={536}
                         alt='mosaic'
+                        style={{ width: 'auto', height: 'auto' }}
                     />
                 </DesktopImgWrapper>
             </Content>

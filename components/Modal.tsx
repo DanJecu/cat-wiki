@@ -32,7 +32,7 @@ const Modal: React.FC<ModalProps> = ({
     const targetElement = document.getElementById(targetId) as HTMLElement;
 
     return createPortal(
-        <AnimatePresence mode='wait'>
+        <AnimatePresence>
             <Overlay
                 initial='exit'
                 animate='enter'

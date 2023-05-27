@@ -93,7 +93,7 @@ const Cat: React.FC<CatProps> = ({ breedData, imagesData }) => {
     const cat = breedData;
     const [imageToDisplay, setImageToDisplay] = useState<string>();
     const [showModal, setShowModal] = useState(false);
-
+    console.log(imagesData);
     const images = imagesData.map((x: ImageData) => {
         return { url: x.url, width: x.width, height: x.height };
     });
@@ -101,7 +101,7 @@ const Cat: React.FC<CatProps> = ({ breedData, imagesData }) => {
     return (
         <>
             <Head>
-                <title>{cat.name} - Cat Wiki</title>
+                <title>{cat.name && `${cat.name} -`} Cat Wiki</title>
             </Head>
 
             <Container
@@ -125,6 +125,8 @@ const Cat: React.FC<CatProps> = ({ breedData, imagesData }) => {
                             className='main-img'
                             alt='Featured image of the breed'
                             fill
+                            sizes='20vw'
+                            priority
                         />
                     </HeroImgWrapper>
 
@@ -231,6 +233,8 @@ const Cat: React.FC<CatProps> = ({ breedData, imagesData }) => {
                                                 src={img.url}
                                                 alt='Photo of this breed of cat'
                                                 fill
+                                                sizes='20vw'
+                                                priority
                                             />
                                         </div>
                                     </FadeIn>
@@ -259,6 +263,8 @@ const Cat: React.FC<CatProps> = ({ breedData, imagesData }) => {
                                     src={imageToDisplay || ''}
                                     alt='Photo of this breed of cat'
                                     fill
+                                    sizes='20vw'
+                                    priority
                                 />
                             </div>
 

@@ -24,6 +24,8 @@ const MainArticle = () => {
                                     src='/images/bengal.jpg'
                                     alt='Photo of a bengal cat'
                                     fill
+                                    sizes='20vw'
+                                    priority
                                 />
                             </div>
                             <span>Bengal</span>
@@ -38,6 +40,8 @@ const MainArticle = () => {
                                     src='/images/savannah.jpg'
                                     alt='Photo of a Savannah cat'
                                     fill
+                                    sizes='20vw'
+                                    priority
                                 />
                             </div>
                             <span>Savannah</span>
@@ -52,6 +56,8 @@ const MainArticle = () => {
                                     src='/images/norwegian.jpg'
                                     alt='Photo of a Norwegian Forest cat'
                                     fill
+                                    sizes='20vw'
+                                    priority
                                 />
                             </div>
                             <span>Norwegian Forest Cat</span>
@@ -66,6 +72,8 @@ const MainArticle = () => {
                                     src='/images/selkirk.jpg'
                                     alt='Photo of a Selkirk Rex cat'
                                     fill
+                                    sizes='20vw'
+                                    priority
                                 />
                             </div>
                             <span>Selkirk Rex</span>

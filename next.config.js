@@ -4,6 +4,9 @@ const nextConfig = {
     images: {
         domains: ['cdn2.thecatapi.com'],
     },
+    compiler: {
+        styledComponents: true,
+    },
 };
 
 module.exports = nextConfig;

@@ -48,7 +48,12 @@ const Hero: React.FC<HeroProps> = ({ catList }) => {
         <HeroContainer>
             <HeroContent>
                 <LogoWrapper>
-                    <Image src='/images/logo.svg' alt='Cat Wiki Logo' fill />
+                    <Image
+                        src='/images/logo.svg'
+                        alt='Cat Wiki Logo'
+                        fill
+                        priority
+                    />
                 </LogoWrapper>
 
                 <h2>Get to know more about your cat breed</h2>
@@ -66,6 +71,7 @@ const Hero: React.FC<HeroProps> = ({ catList }) => {
                             width={18}
                             height={18}
                             alt='search-icon'
+                            priority
                         />
                     </button>
                 </InputWrapper>
@@ -81,7 +87,9 @@ const Hero: React.FC<HeroProps> = ({ catList }) => {
                         src='/images/heroImage.png'
                         width={1873}
                         height={808}
+                        style={{ width: 'auto', height: 'auto' }}
                         alt='hero-img'
+                        priority={true}
                     />
                 </div>
             </HeroImageContainer>
@@ -227,7 +235,7 @@ const HeroImageContainer = styled.div`
     position: relative;
 
     .hero-img-wrapper {
-        display: none;
+        display: flex;
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -236,10 +244,6 @@ const HeroImageContainer = styled.div`
             object-fit: cover;
             object-position: 90% 50%;
             border-radius: 50%;
-        }
-
-        @media ${props => props.theme.devices.laptop} {
-            display: flex;
         }
     }
 
