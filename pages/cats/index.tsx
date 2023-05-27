@@ -36,7 +36,7 @@ const CatList: React.FC<CatListProps> = ({ catList }) => {
     return (
         <>
             <Head>
-                <title>Full Breed List - Cat Wiki</title>
+                <title>Breed List - Cat Wiki</title>
             </Head>
 
             <Container
@@ -70,6 +70,8 @@ const CatList: React.FC<CatListProps> = ({ catList }) => {
                                                     }
                                                     alt='Photo of a Norwegian Forest cat'
                                                     fill
+                                                    sizes='20vw'
+                                                    priority
                                                 />
                                             </div>
 

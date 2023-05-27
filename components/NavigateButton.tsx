@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -9,8 +8,8 @@ interface NavigateButtonProps {
 
 const NavigateButton: React.FC<NavigateButtonProps> = ({ text, to = '/' }) => {
     return (
-        <Link href={to}>
-            <Container className='btn-expand'>
+        <Container className='btn-expand'>
+            <a href={to}>
                 <span>{text}</span>
 
                 <svg
@@ -50,8 +49,8 @@ const NavigateButton: React.FC<NavigateButtonProps> = ({ text, to = '/' }) => {
                         fill='#78716C'
                     />
                 </svg>
-            </Container>
-        </Link>
+            </a>
+        </Container>
     );
 };
 
@@ -66,14 +65,11 @@ const Container = styled.div`
         text-transform: uppercase;
         font-size: 1rem;
         font-weight: 600;
-
         background: none;
         outline: none;
         border: none;
-
         align-self: center;
         margin-right: 0.5rem;
-
         transition: all 0.4s;
     }
 

@@ -8,7 +8,12 @@ function Header() {
         <Container>
             <Link href='/'>
                 <LogoWrapper>
-                    <Image src='/images/logo.svg' alt='Cat Wiki Logo' fill />
+                    <Image
+                        src='/images/logo.svg'
+                        alt='Cat Wiki Logo'
+                        fill
+                        priority
+                    />
                 </LogoWrapper>
             </Link>
 

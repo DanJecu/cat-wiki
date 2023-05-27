@@ -45,23 +45,22 @@ interface CatProps {
 }
 
 export const getStaticProps: GetStaticProps<CatProps> = async ({ params }) => {
-    if (!params) {
+    if (!params || params.id === 'mala') {
+        //These ID is not working
         return {
             notFound: true,
         };
     }
 
-    const breedId = params.id;
-
     // Fetch breed information
     const breedReq = await fetch(
-        `https://api.thecatapi.com/v1/breeds/${breedId}`
+        `https://api.thecatapi.com/v1/breeds/${params.id}`
     );
     const breedData: BreedData = await breedReq.json();
 
     // Fetch images for the breed
     const imagesReq = await fetch(
-        `https://api.thecatapi.com/v1/images/search?breed_id=${breedId}&api_key=${process.env.CAT_API_KEY}&limit=30`
+        `https://api.thecatapi.com/v1/images/search?breed_id=${params.id}&api_key=${process.env.CAT_API_KEY}&limit=30`
     );
     const imagesData: ImageData[] = await imagesReq.json();
 
@@ -94,16 +93,16 @@ const Cat: React.FC<CatProps> = ({ breedData, imagesData }) => {
     const [imageToDisplay, setImageToDisplay] = useState<string>();
     const [showModal, setShowModal] = useState(false);
 
-    const images = imagesData
-        ? imagesData.map((x: ImageData) => {
-              return { url: x.url, width: x.width, height: x.height };
-          })
-        : [];
+    const images = imagesData.map((image: ImageData) => ({
+        url: image.url,
+        width: image.width,
+        height: image.height,
+    }));
 
     return (
         <>
             <Head>
-                <title>{cat.name && `${cat.name} -`} Cat Wiki</title>
+                <title>{`${cat.name} - Cat Wiki`}</title>
             </Head>
 
             <Container
@@ -204,12 +203,10 @@ const Cat: React.FC<CatProps> = ({ breedData, imagesData }) => {
                             />
                         </StatsWrapper>
 
-                        <a href={cat.wikipedia_url}>
-                            <NavigateButton
-                                text='Read more'
-                                to={cat.wikipedia_url}
-                            />
-                        </a>
+                        <NavigateButton
+                            text='Read more'
+                            to={cat.wikipedia_url}
+                        />
                     </Characteristics>
                 </div>
 
