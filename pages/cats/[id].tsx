@@ -93,10 +93,12 @@ const Cat: React.FC<CatProps> = ({ breedData, imagesData }) => {
     const cat = breedData;
     const [imageToDisplay, setImageToDisplay] = useState<string>();
     const [showModal, setShowModal] = useState(false);
-    console.log(imagesData);
-    const images = imagesData.map((x: ImageData) => {
-        return { url: x.url, width: x.width, height: x.height };
-    });
+
+    const images = imagesData
+        ? imagesData.map((x: ImageData) => {
+              return { url: x.url, width: x.width, height: x.height };
+          })
+        : [];
 
     return (
         <>
