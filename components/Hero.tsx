@@ -82,14 +82,13 @@ const Hero: React.FC<HeroProps> = ({ catList }) => {
 
             <HeroImageContainer>
                 <div className='hero-img-wrapper'>
-                    <Image
+                    <img
                         className='hero-img'
                         src='/images/heroImage.png'
                         width={1873}
                         height={808}
                         style={{ width: 'auto', height: 'auto' }}
                         alt='hero-img'
-                        priority
                     />
                 </div>
             </HeroImageContainer>
