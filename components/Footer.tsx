@@ -18,7 +18,7 @@ const Footer = () => {
                     About
                 </Link>
                 <Link href='/cats' scroll={false}>
-                    Cats List
+                    Cat List
                 </Link>
                 <Link href='/random' scroll={false}>
                     Random Cat
