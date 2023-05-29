@@ -89,7 +89,7 @@ const Hero: React.FC<HeroProps> = ({ catList }) => {
                         height={808}
                         style={{ width: 'auto', height: 'auto' }}
                         alt='hero-img'
-                        priority={true}
+                        priority
                     />
                 </div>
             </HeroImageContainer>
