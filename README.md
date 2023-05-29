@@ -13,7 +13,6 @@ CatWiki is a server-side rendered web application that provides a comprehensive 
 
 ## What I Learned
 
-The app is built using Next.js, that allowed me to implement server-side rendering (SSR) and hybrid static generation. 
 Throughout the development process, I familiarized myself with Next.js and its features. I gained knowledge in Next.js's routing system, server-side rendering (SSR), hybrid static generation, and the use of dynamic routes to render individual cat breed pages.
 ## Screenshots
 
