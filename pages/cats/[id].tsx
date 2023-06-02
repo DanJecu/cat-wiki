@@ -46,7 +46,7 @@ interface CatProps {
 
 export const getStaticProps: GetStaticProps<CatProps> = async ({ params }) => {
     if (!params || params.id === 'mala') {
-        //These ID is not working
+        //Thise ID is not working
         return {
             notFound: true,
         };
